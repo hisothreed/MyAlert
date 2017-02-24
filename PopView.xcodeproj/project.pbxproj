@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E49A1C21E6088E1006C5F4A /* NIBB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E49A1C11E6088E1006C5F4A /* NIBB.xib */; };
 		9E9F19E71DF8090800EA89AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F19E61DF8090800EA89AC /* AppDelegate.swift */; };
 		9E9F19E91DF8090800EA89AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F19E81DF8090800EA89AC /* ViewController.swift */; };
 		9E9F19EC1DF8090800EA89AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9F19EA1DF8090800EA89AC /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E49A1C11E6088E1006C5F4A /* NIBB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NIBB.xib; sourceTree = "<group>"; };
 		9E9F19E31DF8090800EA89AC /* PopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9F19E61DF8090800EA89AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E9F19E81DF8090800EA89AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				9E9F19E81DF8090800EA89AC /* ViewController.swift */,
 				9E9F19EA1DF8090800EA89AC /* Main.storyboard */,
 				9E9F1A141DF809B100EA89AC /* PopView.swift */,
+				9E49A1C11E6088E1006C5F4A /* NIBB.xib */,
 				9E9F19ED1DF8090800EA89AC /* Assets.xcassets */,
 				9E9F19EF1DF8090800EA89AC /* LaunchScreen.storyboard */,
 				9E9F19F21DF8090800EA89AC /* Info.plist */,
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E49A1C21E6088E1006C5F4A /* NIBB.xib in Resources */,
 				9E9F19F11DF8090800EA89AC /* LaunchScreen.storyboard in Resources */,
 				9E9F19EE1DF8090800EA89AC /* Assets.xcassets in Resources */,
 				9E9F19EC1DF8090800EA89AC /* Main.storyboard in Resources */,
@@ -417,8 +421,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FZFRKGPX25;
 				INFOPLIST_FILE = PopView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hiso3D.PopView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,8 +436,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FZFRKGPX25;
 				INFOPLIST_FILE = PopView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hiso3D.PopView;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -32,9 +32,11 @@ class ViewController: UIViewController , popVAlertDelegate {
     
     @IBAction func showAlert(sender: AnyObject) {
     
-        let vie = PopView(title: "hellllllooooooo wooooorrrrrllllld",description: "hello description", type: .done, withButtonsWithTitles: ["hello1" , "hello2","hello3"],withTextfields: ["hello1","hello2"], delegate: self)
-
-   
+//        let vie = PopView(title: "hellllllooooooo wooooorrrrrllllld",description: "hello description", type: .done, withButtonsWithTitles: ["hello1" , "hello2","hello3"],withTextfields: ["hello1","hello2"], delegate: self)
+//
+//   
+        
+        let vie = PopView(withNibName: "NIBB", delegate: self)
         
         vie.show(animation: .fadeIn)
 

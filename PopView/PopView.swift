@@ -82,6 +82,15 @@ public class PopView: UIView {
         
     }
     
+    
+    public init(withNibName nibName: String,delegate: popVAlertDelegate) {
+        super.init(frame: CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight))
+        self.center.x = viewWidth/2
+        self.center.y = viewHeight/2
+        
+        initFromNib(name: nibName, delegate: delegate)
+    }
+    
     ///// Set-Ups
     
     private func setUpBlurView() {
@@ -111,9 +120,49 @@ public class PopView: UIView {
         
     }
     
+    private func initFromNib(name: String,delegate: popVAlertDelegate) {
+    
+        
+        setUpBlurView()
+        
+        self.delegate = delegate
+        
+        guard let userView = Bundle.main.loadNibNamed(name, owner: self, options: nil)?.first as? UIView else {
+        
+            print("please provide correct nib name")
+            
+            return
+        }
+        
+        let userViewHeight = userView.bounds.height
+        let userViewWidth = userView.bounds.width
+        
+        
+        
+        let popV : UIView = {
+            
+            let view = UIView(frame: CGRect(x: 0,y: 0, width: userViewWidth, height: userViewHeight))
+            view.center = self.center
+            view.backgroundColor = UIColor.white
+            view.layer.cornerRadius = 0
+            view.layer.masksToBounds = true
+            view.clipsToBounds = false
+            view.addSubview(userView)
+            return view
+        }()
+        
+
+        
+
+        self.popv = popV
+        
+    }
+    
     
     private func initalizeWithTitle(title: String,description: String?,type : types, delegate: popVAlertDelegate) {
     
+        setUpBlurView()
+        
         self.delegate = delegate
         
         let heightOfLabelView = heightForView(text: title)
@@ -565,7 +614,6 @@ public class PopView: UIView {
                self.addSubview(popv!)
                break
         case .fadeIn :
-            
                self.popv?.alpha = 0
                self.addSubview(popv!)
                
